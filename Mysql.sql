@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [DogSalon_AR]    
+/****** Object:  Database [DogSalon_AR]  *****/  
 CREATE DATABASE [DogSalon_AR]
  CONTAINMENT = NONE
  ON  PRIMARY 
