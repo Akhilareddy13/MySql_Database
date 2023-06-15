@@ -82,7 +82,7 @@ ALTER DATABASE [DogSalon_AR] SET QUERY_STORE = OFF
 GO
 USE [DogSalon_AR]
 GO
-/****** Object:  Table [dbo].[Customer3History]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Customer3History]   
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,14 +100,14 @@ WITH
 DATA_COMPRESSION = PAGE
 )
 GO
-/****** Object:  Index [ix_Customer3History]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Index [ix_Customer3History]    Script Date: 6/15/2023 7:27:28 PM ******
 CREATE CLUSTERED INDEX [ix_Customer3History] ON [dbo].[Customer3History]
 (
 	[EndDate] ASC,
 	[StartDate] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF, DATA_COMPRESSION = PAGE) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Customer_2]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Customer_2]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,7 +130,7 @@ WITH
 SYSTEM_VERSIONING = ON (HISTORY_TABLE = [dbo].[Customer3History])
 )
 GO
-/****** Object:  Table [dbo].[Customer]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Customer]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -151,7 +151,7 @@ CREATE TABLE [dbo].[Customer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Dog]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Dog]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -170,7 +170,7 @@ CREATE TABLE [dbo].[Dog](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Employee]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Employee]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -191,7 +191,7 @@ CREATE TABLE [dbo].[Employee](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FamilyMember]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[FamilyMember]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -206,7 +206,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedCustomer]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedCustomer]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -223,7 +223,7 @@ CREATE TABLE [dbo].[ImportedCustomer](
 	[Email] [nvarchar](100) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedDog]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedDog]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -237,7 +237,7 @@ CREATE TABLE [dbo].[ImportedDog](
 	[CustID] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedEmployee]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedEmployee]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -254,7 +254,7 @@ CREATE TABLE [dbo].[ImportedEmployee](
 	[Email] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedFamMember]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedFamMember]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -265,7 +265,7 @@ CREATE TABLE [dbo].[ImportedFamMember](
 	[CustID] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedPrevServ]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedPrevServ]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -275,7 +275,7 @@ CREATE TABLE [dbo].[ImportedPrevServ](
 	[PrefServ] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedProduct]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedProduct]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -288,7 +288,7 @@ CREATE TABLE [dbo].[ImportedProduct](
 	[CostPerUnit] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedService]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedService]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -299,7 +299,7 @@ CREATE TABLE [dbo].[ImportedService](
 	[Price] [money] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedServiceProduct]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedServiceProduct]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -310,7 +310,7 @@ CREATE TABLE [dbo].[ImportedServiceProduct](
 	[Quantity] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedServiceProvided]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedServiceProvided]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -323,7 +323,7 @@ CREATE TABLE [dbo].[ImportedServiceProvided](
 	[ServiceID] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedSupplier]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedSupplier]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -338,7 +338,7 @@ CREATE TABLE [dbo].[ImportedSupplier](
 	[Phone] [float] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ImportedSupplierProduct]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ImportedSupplierProduct]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -351,7 +351,7 @@ CREATE TABLE [dbo].[ImportedSupplierProduct](
 	[ProductID] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PreferredService]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[PreferredService]     ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -366,7 +366,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Product]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Product]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -383,7 +383,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Service]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Service]    ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -399,7 +399,7 @@ CREATE TABLE [dbo].[Service](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ServiceProduct]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ServiceProduct]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -415,7 +415,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ServiceProvided]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[ServiceProvided]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -432,7 +432,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Supplier]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[Supplier]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -451,7 +451,7 @@ CREATE TABLE [dbo].[Supplier](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SupplierProduct]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  Table [dbo].[SupplierProduct]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -523,7 +523,7 @@ ALTER TABLE [dbo].[Service]  WITH CHECK ADD  CONSTRAINT [CK_Service_Description]
 GO
 ALTER TABLE [dbo].[Service] CHECK CONSTRAINT [CK_Service_Description]
 GO
-/****** Object:  StoredProcedure [dbo].[CostOfServices]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[CostOfServices] ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -539,7 +539,7 @@ group by sp.dogID
 order by 'Tot Cost' desc;
 end
 GO
-/****** Object:  StoredProcedure [dbo].[LoopHint]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[LoopHint]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -554,7 +554,7 @@ left LOOP join Ward w
 on b.WardID = w.WardID
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[procServicesForDog]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[procServicesForDog]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -569,7 +569,7 @@ on s.ServiceID=sp.ServiceID
 group by sp.dogID
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[ServiceByEmployee]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[ServiceByEmployee] ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -585,7 +585,7 @@ where date between '2020-01-01' and '2021-10-10'
 group by sp.DogID,sp.EmployeeID
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[ServiceProductsDog]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[ServiceProductsDog]   ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -600,7 +600,7 @@ on s.ServiceID=p.ServiceID
 order by s.DogID
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[ServicesForDog]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[ServicesForDog]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -615,7 +615,7 @@ on s.ServiceID=sp.ServiceID
 group by sp.dogID
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[SumOfCosts]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[SumOfCosts]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -632,7 +632,7 @@ group by sp.EmployeeID
 order by [Total Cost] desc
 end;
 GO
-/****** Object:  StoredProcedure [dbo].[TotalCostServices]    Script Date: 6/15/2023 7:27:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[TotalCostServices]  ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
